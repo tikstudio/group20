@@ -1,0 +1,43 @@
+{
+  "name": "products",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "import": [
+      "./*.js",
+      "./*.json"
+    ]
+  },
+  "scripts": {
+    "start": "nodemon --es-module-specifier-resolution=node -r dotenv/config app.js",
+    "migrate": "node --es-module-specifier-resolution=node -r dotenv/config migrate.js",
+    "prod": "node --es-module-specifier-resolution=node -r dotenv/config app.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "moment": "^2.29.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.6.2",
+    "react-toastify": "^9.1.3",
+    "sequelize": "^6.33.0",
+    "sharp": "^0.32.6",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "nodemon": "^3.0.1"
+  }
+}
