@@ -33,4 +33,5 @@ app.use(errorHandler);
 const server = app.listen(4000, () => {
   console.log('server started ...');
 });
-Socket.init(server);
+
+// Socket.init(server);
