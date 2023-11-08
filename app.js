@@ -30,8 +30,8 @@ app.use((req, res, next) => {
 
 app.use(errorHandler);
 
-const ser = app.listen(4000, () => {
+const server = app.listen(4000, () => {
   console.log('server started ...');
 });
 
-Socket.init(ser);
+Socket.init(server);
