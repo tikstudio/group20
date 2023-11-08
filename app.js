@@ -29,9 +29,9 @@ app.use((req, res, next) => {
 });
 
 app.use(errorHandler);
-console.log(245345345345);
+
 const server = app.listen(4000, () => {
   console.log('server started ...');
 });
 
-// Socket.init(server);
+Socket.init(server);
