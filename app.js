@@ -3,11 +3,11 @@ import path from 'path';
 import HttpError from 'http-errors';
 import morgan from 'morgan';
 import indexRouter from './routes';
-import errorHandler from './middlewares/errorHandler';
-import cors from './middlewares/cors';
-import webpSupport from './middlewares/webpSupport';
-import Socket from './services/Socket';
-import authorization from './middlewares/authorization';
+import errorHandler from './middlewares/errorHandler.js';
+import cors from './middlewares/cors.js';
+import webpSupport from './middlewares/webpSupport.js';
+import Socket from './services/Socket.js';
+import authorization from './middlewares/authorization.js';
 
 process.env.TZ = 'UTC';
 
@@ -34,4 +34,4 @@ const server = app.listen(4000, () => {
   console.log('server started ...');
 });
 
-Socket.init(server);
+ Socket.init(server);
